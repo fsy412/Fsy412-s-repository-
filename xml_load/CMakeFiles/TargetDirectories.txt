@@ -1,0 +1,6 @@
+/home/share/xml_load/module/common/CMakeFiles/Common.dir
+/home/share/xml_load/module/configmanager/CMakeFiles/ConfigManager.dir
+/home/share/xml_load/module/queue/CMakeFiles/Queue.dir
+/home/share/xml_load/module/stl/CMakeFiles/STL.dir
+/home/share/xml_load/module/thread/CMakeFiles/Thread.dir
+/home/share/xml_load/bin/CMakeFiles/module.dir

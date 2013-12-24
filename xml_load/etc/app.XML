@@ -1,0 +1,12 @@
+<app_config>
+	<memory_pool>
+		<size>2</size>
+		<block_size>255</block_size>
+	</memory_pool>
+	<timer>
+		<interval>2</interval>
+	</timer>
+	<log>
+		<level>3</level>
+	</log>
+</app_config>

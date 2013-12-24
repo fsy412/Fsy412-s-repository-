@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/PBU1-RADIUS/!svn/ver/5589/DEV/memorypool/module/simplesocket/simplesocket
+END
+socket_os.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/PBU1-RADIUS/!svn/ver/5589/DEV/memorypool/module/simplesocket/simplesocket/socket_os.hpp
+END
+socket_tcp.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/PBU1-RADIUS/!svn/ver/5589/DEV/memorypool/module/simplesocket/simplesocket/socket_tcp.cpp
+END
+udp_server.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/PBU1-RADIUS/!svn/ver/5589/DEV/memorypool/module/simplesocket/simplesocket/udp_server.cpp
+END
+socket_udp.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/PBU1-RADIUS/!svn/ver/5589/DEV/memorypool/module/simplesocket/simplesocket/socket_udp.cpp
+END
+socket_run.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/PBU1-RADIUS/!svn/ver/5589/DEV/memorypool/module/simplesocket/simplesocket/socket_run.hpp
+END
+tcp_server.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/PBU1-RADIUS/!svn/ver/5589/DEV/memorypool/module/simplesocket/simplesocket/tcp_server.hpp
+END
+socket_base.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/PBU1-RADIUS/!svn/ver/5589/DEV/memorypool/module/simplesocket/simplesocket/socket_base.cpp
+END
+socket_tcp.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/PBU1-RADIUS/!svn/ver/5589/DEV/memorypool/module/simplesocket/simplesocket/socket_tcp.hpp
+END
+udp_server.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/PBU1-RADIUS/!svn/ver/5589/DEV/memorypool/module/simplesocket/simplesocket/udp_server.hpp
+END
+socket_udp.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/PBU1-RADIUS/!svn/ver/5589/DEV/memorypool/module/simplesocket/simplesocket/socket_udp.hpp
+END
+socket_base.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/PBU1-RADIUS/!svn/ver/5589/DEV/memorypool/module/simplesocket/simplesocket/socket_base.hpp
+END
+tcp_server.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/PBU1-RADIUS/!svn/ver/5589/DEV/memorypool/module/simplesocket/simplesocket/tcp_server.cpp
+END

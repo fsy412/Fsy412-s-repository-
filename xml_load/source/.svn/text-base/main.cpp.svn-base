@@ -1,0 +1,59 @@
+#include <queue> 
+#include "MemoryPool.h"
+#include "log.hpp"
+#include "syslog.h"
+#include "common.hpp"
+#include <iostream>
+#include <thread.hpp>
+#include "Module.h"
+#include "AppConfig.h"
+
+module::CLog *log;
+int log_level;
+void init_log()
+{
+	log = new module::CLog(".",LOG_NAME, CAppConfig::GetInstance()->GetLogLevel(),10);
+/*
+	openlog("moudle", LOG_CONS | LOG_PID, 0);
+	syslog(LOG_USER | LOG_INFO, "syslog test message generated in moudle!!!! \n");*/
+}
+
+void load_app_config()
+{
+	CAppConfig::GetInstance();
+}
+
+void test()
+{
+	CModule a,b,c;
+
+	CMemoryPool* pool = CMemoryPool :: GetInstance();
+	pool->Init(	CAppConfig::GetInstance()->GetMemoryPoolSize(), CAppConfig::GetInstance()->GetMemoryBlockSize());
+	MemoryBlock* p = pool->Allocate();
+	MemoryBlock* p1 = pool->Allocate();
+	a.Push(p);
+	b.Push(p);
+	c.Push(p);
+
+	a.Pop();
+	b.Pop();
+	c.Pop();
+}
+
+void test1()
+{
+	CMemoryPool* pool = CMemoryPool :: GetInstance();
+	pool->Init(CAppConfig::GetInstance()->GetMemoryPoolSize(), CAppConfig::GetInstance()->GetMemoryBlockSize());
+	MemoryBlock* p = pool->Allocate();
+	MemoryBlock* p1 = pool->Allocate();
+	MemoryBlock* p2= pool->Allocate();
+}
+int main()
+{
+	load_app_config();
+	init_log();
+ 	log->PushLog(DEBUG,"Started           ");
+ 	test1();
+	module::Sleep(100);
+	return 0;
+}

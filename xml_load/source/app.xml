@@ -1,0 +1,32 @@
+ 
+<Root>  
+  
+  
+    <!- 注：端口信息的父标记只能为“ports” ->  
+    <ports>  
+        <port name="COM1" brate="9600"  data="8" odd_even_check_bit ="0" stop_bit="0">    </port>  
+        <port name="COM2" brate="9600"  data="8" odd_even_check_bit ="0" stop_bit="0">    </port>  
+        <port name="COM3" brate="9600"  data="8" odd_even_check_bit ="0" stop_bit="0">    </port>  
+        <!- ........->  
+    </ports>  
+  
+    <!- 注：设备驱动信息的父标记只能为“drivers”->  
+    <drivers>  
+        <driver name="stm100">  
+            <var name="i" address="0" value="10"> </var>  
+            <var name="u" address="1" value="10"> </var>  
+            <var name="r" address="2" value="50"> </var>  
+        </driver>  
+    </drivers>  
+  
+  
+    <!- 注：设备信息的父标记只能为"devs"->  
+    <devs>  
+        <dev name="sta1" adress="1" cname="COM1" driver="stm100"> </dev>   
+        <dev name="sta1" adress="2" cname="COM1" driver="stm100"> </dev>   
+        <dev name="sta1" adress="3" cname="COM2" driver="stm100"> </dev>   
+        <dev name="sta1" adress="4" cname="COM3" driver="stm100"> </dev>   
+        <!- ........->  
+    </devs>  
+  
+</Root>

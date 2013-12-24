@@ -1,0 +1,2 @@
+/usr/bin/ar cr libSTL.a  CMakeFiles/STL.dir/stl_queue.cpp.o
+/usr/bin/ranlib libSTL.a

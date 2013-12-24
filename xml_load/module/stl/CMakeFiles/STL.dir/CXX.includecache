@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/share/xml_load/module/stl/stl_queue.cpp
+stl_queue.hpp
+/home/share/xml_load/module/stl/stl_queue.hpp
+
+/home/share/xml_load/module/stl/stl_queue.hpp
+stdio.h
+-
+stdlib.h
+-
+iostream
+-
+exception
+-
+stdexcept
+-
+
