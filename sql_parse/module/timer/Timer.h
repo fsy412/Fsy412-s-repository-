@@ -4,6 +4,8 @@
 #include <iostream> 
 
 #include <log.hpp>
+#include <sys/time.h>
+
 extern module::CLog *log;
 
 class Timer 
@@ -20,6 +22,7 @@ private:
 	clock_t _start_time; 
 	double _interval;
  	bool _run;
+	struct timeval start;
 }; // time
  
 #endif

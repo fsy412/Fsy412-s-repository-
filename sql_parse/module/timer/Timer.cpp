@@ -8,6 +8,7 @@ void Timer::restart()
 { 
 	log->PushLog(DEBUG," Timer::restart() ");
 	_start_time = clock();
+	 gettimeofday( &start, NULL );
 	_run = true;
 }
 void Timer::set_interval(double interval)  
@@ -17,7 +18,9 @@ void Timer::set_interval(double interval)
 
 double Timer::elapsed() const 
 {
-	return _run ?  (double(clock() - _start_time) / CLOCKS_PER_SEC) : 0;
+    struct timeval end;
+    gettimeofday(&end, NULL);
+	return _run ?   (1000000 * ( end.tv_sec - start.tv_sec ) + end.tv_usec - start.tv_usec)/1000000 : 0;
 }
 bool Timer::timeout()
 {
