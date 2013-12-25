@@ -293,6 +293,7 @@ int dictionary::scan(std::string path)
 				
 				_basic_name_dic.insert(std::make_pair("cisco", _basic_dic_name_iter.size() - 1));
 		
+			
 			}else if (std::string (ent->d_name ) == "redback.xml")
 			{
 				uint8_t key;
@@ -577,6 +578,7 @@ int dictionary::scan(std::string path)
 				
 				_basic_name_dic.insert(std::make_pair("unisphere", _basic_dic_name_iter.size() - 1));
 				
+		
 			}else if (std::string (ent->d_name ) == "zte.xml")
 			{
 				uint8_t key; 
