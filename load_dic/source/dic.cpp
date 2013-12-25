@@ -5,9 +5,9 @@ namespace ghca{
  
 int dictionary::scan(std::string path)
 {
-    DIR *pDir ;  
+    DIR *pDir;  
     
-    struct dirent *ent  ;  
+    struct dirent *ent;  
     
     int i = 0;  
     
@@ -33,7 +33,8 @@ int dictionary::scan(std::string path)
 				
 				if (!doc.LoadFile(name.c_str()))
 				{
-					std::cout << "load xml failed!" << std::endl;
+					std::cout << "load xml "<< name<<" failed!" << std::endl;
+					
 					return 1;
 				}
 							
@@ -214,7 +215,7 @@ int dictionary::scan(std::string path)
 				
 				if (!doc.LoadFile(name.c_str()))
 				{
-					std::cout << "load xml failed!" << std::endl;
+					std::cout << "load xml "<< name<<" failed!" << std::endl;
 					
 					return 1;
 				}
@@ -403,7 +404,6 @@ int dictionary::scan(std::string path)
 				
 				if (!doc.LoadFile(name.c_str()))
 				{
-				
 					std::cout << "load xml "<< name<<" failed!" << std::endl;
 					
 					return 1;
@@ -621,7 +621,6 @@ int dictionary::scan(std::string path)
 				
 	 			while(pElementtmp)
 				{
-					
 					if (strcmp(pElementtmp->Value(),"zte") == 0) 
 					{
 						key = atoi(pElementtmp->Attribute("vid"));

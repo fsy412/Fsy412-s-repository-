@@ -2,6 +2,12 @@
 #include <iostream>
 #include <stdint.h>
 #include <dic.h>
+
+
+#include <iostream>
+#include "tinyxml.h"
+#include <string>
+
 using namespace ghca;
 
 char peer0_0[] = {
@@ -18,22 +24,9 @@ char peer0_0[] = {
 	0x09, 0x01, 0x0a, 0x61, 0x73, 0x64, 0x66, 0x61, 
 	0x64, 0x66, 0x61 };
 
-	
-	
- 
-#include <iostream>
- 
-#include "tinyxml.h"
- 
-#include <string>
- 
- 
- 
-	
-	
+
 int main()
 {
-	
 	
 	radiusdecode _radiuscode;
 
@@ -43,7 +36,7 @@ int main()
 	}
 	
 	dictionary dic;
-	dic.scan("/mnt/smb/load_dic/bin/dic");
+	dic.scan("./dic");
 	
 
 	basic_radius_avp _avp;
