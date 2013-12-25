@@ -1,7 +1,7 @@
 #include <dic.h>
 #include <tinyxml.h>
    
-namespace ghca{ 
+ namespace ghca{ 
  
 int dictionary::scan(std::string path)
 {
