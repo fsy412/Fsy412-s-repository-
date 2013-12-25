@@ -6,9 +6,12 @@
 int dictionary::scan(std::string path)
 {
 	DIR              *pDir ;  
+	
     struct dirent    *ent  ;  
-    int               i=0  ;  
-    char              childpath[512];  
+    
+	int               i=0  ;  
+    
+	char              childpath[512];  
  
     pDir=opendir(path.c_str());  
 	
