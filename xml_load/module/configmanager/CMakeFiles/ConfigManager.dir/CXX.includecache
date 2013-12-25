@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/mnt/smb/Fsy412-s-repository-/xml_load/module/configmanager/configmanager.cpp
+/home/share/xml_load/module/configmanager/configmanager.cpp
 configmanager.hpp
-/mnt/smb/Fsy412-s-repository-/xml_load/module/configmanager/configmanager.hpp
+/home/share/xml_load/module/configmanager/configmanager.hpp
 
-/mnt/smb/Fsy412-s-repository-/xml_load/module/configmanager/configmanager.hpp
+/home/share/xml_load/module/configmanager/configmanager.hpp
 map
 -
 vector

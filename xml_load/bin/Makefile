@@ -30,19 +30,16 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E remove -f
-
-# Escaping for special characters.
-EQUALS = =
+RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/smb/Fsy412-s-repository-/xml_load
+CMAKE_SOURCE_DIR = /home/share/xml_load
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/smb/Fsy412-s-repository-/xml_load
+CMAKE_BINARY_DIR = /home/share/xml_load
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -50,7 +47,7 @@ CMAKE_BINARY_DIR = /mnt/smb/Fsy412-s-repository-/xml_load
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
-	/usr/local/bin/cmake -i .
+	/usr/bin/cmake -i .
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -60,7 +57,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -69,14 +66,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/smb/Fsy412-s-repository-/xml_load/CMakeFiles /mnt/smb/Fsy412-s-repository-/xml_load/bin/CMakeFiles/progress.marks
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f CMakeFiles/Makefile2 bin/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/smb/Fsy412-s-repository-/xml_load/CMakeFiles 0
+	cd /home/share/xml_load && $(CMAKE_COMMAND) -E cmake_progress_start /home/share/xml_load/CMakeFiles /home/share/xml_load/bin/CMakeFiles/progress.marks
+	cd /home/share/xml_load && $(MAKE) -f CMakeFiles/Makefile2 bin/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/share/xml_load/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f CMakeFiles/Makefile2 bin/clean
+	cd /home/share/xml_load && $(MAKE) -f CMakeFiles/Makefile2 bin/clean
 .PHONY : clean
 
 # The main clean target
@@ -85,22 +82,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f CMakeFiles/Makefile2 bin/preinstall
+	cd /home/share/xml_load && $(MAKE) -f CMakeFiles/Makefile2 bin/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f CMakeFiles/Makefile2 bin/preinstall
+	cd /home/share/xml_load && $(MAKE) -f CMakeFiles/Makefile2 bin/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/share/xml_load && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 bin/CMakeFiles/module.dir/rule:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/module.dir/rule
+	cd /home/share/xml_load && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/module.dir/rule
 .PHONY : bin/CMakeFiles/module.dir/rule
 
 # Convenience name for target.
@@ -109,7 +106,7 @@ module: bin/CMakeFiles/module.dir/rule
 
 # fast build rule for target.
 module/fast:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/build
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/build
 .PHONY : module/fast
 
 __/module/common/common.o: __/module/common/common.cpp.o
@@ -117,7 +114,7 @@ __/module/common/common.o: __/module/common/common.cpp.o
 
 # target to build an object file
 __/module/common/common.cpp.o:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/common/common.cpp.o
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/common/common.cpp.o
 .PHONY : __/module/common/common.cpp.o
 
 __/module/common/common.i: __/module/common/common.cpp.i
@@ -125,7 +122,7 @@ __/module/common/common.i: __/module/common/common.cpp.i
 
 # target to preprocess a source file
 __/module/common/common.cpp.i:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/common/common.cpp.i
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/common/common.cpp.i
 .PHONY : __/module/common/common.cpp.i
 
 __/module/common/common.s: __/module/common/common.cpp.s
@@ -133,7 +130,7 @@ __/module/common/common.s: __/module/common/common.cpp.s
 
 # target to generate assembly for a file
 __/module/common/common.cpp.s:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/common/common.cpp.s
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/common/common.cpp.s
 .PHONY : __/module/common/common.cpp.s
 
 __/module/log/log.o: __/module/log/log.cpp.o
@@ -141,7 +138,7 @@ __/module/log/log.o: __/module/log/log.cpp.o
 
 # target to build an object file
 __/module/log/log.cpp.o:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/log/log.cpp.o
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/log/log.cpp.o
 .PHONY : __/module/log/log.cpp.o
 
 __/module/log/log.i: __/module/log/log.cpp.i
@@ -149,7 +146,7 @@ __/module/log/log.i: __/module/log/log.cpp.i
 
 # target to preprocess a source file
 __/module/log/log.cpp.i:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/log/log.cpp.i
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/log/log.cpp.i
 .PHONY : __/module/log/log.cpp.i
 
 __/module/log/log.s: __/module/log/log.cpp.s
@@ -157,7 +154,7 @@ __/module/log/log.s: __/module/log/log.cpp.s
 
 # target to generate assembly for a file
 __/module/log/log.cpp.s:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/log/log.cpp.s
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/log/log.cpp.s
 .PHONY : __/module/log/log.cpp.s
 
 __/module/thread/mutex.o: __/module/thread/mutex.cpp.o
@@ -165,7 +162,7 @@ __/module/thread/mutex.o: __/module/thread/mutex.cpp.o
 
 # target to build an object file
 __/module/thread/mutex.cpp.o:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/thread/mutex.cpp.o
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/thread/mutex.cpp.o
 .PHONY : __/module/thread/mutex.cpp.o
 
 __/module/thread/mutex.i: __/module/thread/mutex.cpp.i
@@ -173,7 +170,7 @@ __/module/thread/mutex.i: __/module/thread/mutex.cpp.i
 
 # target to preprocess a source file
 __/module/thread/mutex.cpp.i:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/thread/mutex.cpp.i
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/thread/mutex.cpp.i
 .PHONY : __/module/thread/mutex.cpp.i
 
 __/module/thread/mutex.s: __/module/thread/mutex.cpp.s
@@ -181,7 +178,7 @@ __/module/thread/mutex.s: __/module/thread/mutex.cpp.s
 
 # target to generate assembly for a file
 __/module/thread/mutex.cpp.s:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/thread/mutex.cpp.s
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/thread/mutex.cpp.s
 .PHONY : __/module/thread/mutex.cpp.s
 
 __/module/thread/semaphore.o: __/module/thread/semaphore.cpp.o
@@ -189,7 +186,7 @@ __/module/thread/semaphore.o: __/module/thread/semaphore.cpp.o
 
 # target to build an object file
 __/module/thread/semaphore.cpp.o:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/thread/semaphore.cpp.o
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/thread/semaphore.cpp.o
 .PHONY : __/module/thread/semaphore.cpp.o
 
 __/module/thread/semaphore.i: __/module/thread/semaphore.cpp.i
@@ -197,7 +194,7 @@ __/module/thread/semaphore.i: __/module/thread/semaphore.cpp.i
 
 # target to preprocess a source file
 __/module/thread/semaphore.cpp.i:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/thread/semaphore.cpp.i
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/thread/semaphore.cpp.i
 .PHONY : __/module/thread/semaphore.cpp.i
 
 __/module/thread/semaphore.s: __/module/thread/semaphore.cpp.s
@@ -205,7 +202,7 @@ __/module/thread/semaphore.s: __/module/thread/semaphore.cpp.s
 
 # target to generate assembly for a file
 __/module/thread/semaphore.cpp.s:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/thread/semaphore.cpp.s
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/thread/semaphore.cpp.s
 .PHONY : __/module/thread/semaphore.cpp.s
 
 __/module/thread/thread.o: __/module/thread/thread.cpp.o
@@ -213,7 +210,7 @@ __/module/thread/thread.o: __/module/thread/thread.cpp.o
 
 # target to build an object file
 __/module/thread/thread.cpp.o:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/thread/thread.cpp.o
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/thread/thread.cpp.o
 .PHONY : __/module/thread/thread.cpp.o
 
 __/module/thread/thread.i: __/module/thread/thread.cpp.i
@@ -221,7 +218,7 @@ __/module/thread/thread.i: __/module/thread/thread.cpp.i
 
 # target to preprocess a source file
 __/module/thread/thread.cpp.i:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/thread/thread.cpp.i
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/thread/thread.cpp.i
 .PHONY : __/module/thread/thread.cpp.i
 
 __/module/thread/thread.s: __/module/thread/thread.cpp.s
@@ -229,7 +226,7 @@ __/module/thread/thread.s: __/module/thread/thread.cpp.s
 
 # target to generate assembly for a file
 __/module/thread/thread.cpp.s:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/thread/thread.cpp.s
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/thread/thread.cpp.s
 .PHONY : __/module/thread/thread.cpp.s
 
 __/module/timer/Timer.o: __/module/timer/Timer.cpp.o
@@ -237,7 +234,7 @@ __/module/timer/Timer.o: __/module/timer/Timer.cpp.o
 
 # target to build an object file
 __/module/timer/Timer.cpp.o:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/timer/Timer.cpp.o
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/timer/Timer.cpp.o
 .PHONY : __/module/timer/Timer.cpp.o
 
 __/module/timer/Timer.i: __/module/timer/Timer.cpp.i
@@ -245,7 +242,7 @@ __/module/timer/Timer.i: __/module/timer/Timer.cpp.i
 
 # target to preprocess a source file
 __/module/timer/Timer.cpp.i:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/timer/Timer.cpp.i
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/timer/Timer.cpp.i
 .PHONY : __/module/timer/Timer.cpp.i
 
 __/module/timer/Timer.s: __/module/timer/Timer.cpp.s
@@ -253,7 +250,7 @@ __/module/timer/Timer.s: __/module/timer/Timer.cpp.s
 
 # target to generate assembly for a file
 __/module/timer/Timer.cpp.s:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/timer/Timer.cpp.s
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/timer/Timer.cpp.s
 .PHONY : __/module/timer/Timer.cpp.s
 
 __/module/tinyxml/tinystr.o: __/module/tinyxml/tinystr.cpp.o
@@ -261,7 +258,7 @@ __/module/tinyxml/tinystr.o: __/module/tinyxml/tinystr.cpp.o
 
 # target to build an object file
 __/module/tinyxml/tinystr.cpp.o:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinystr.cpp.o
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinystr.cpp.o
 .PHONY : __/module/tinyxml/tinystr.cpp.o
 
 __/module/tinyxml/tinystr.i: __/module/tinyxml/tinystr.cpp.i
@@ -269,7 +266,7 @@ __/module/tinyxml/tinystr.i: __/module/tinyxml/tinystr.cpp.i
 
 # target to preprocess a source file
 __/module/tinyxml/tinystr.cpp.i:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinystr.cpp.i
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinystr.cpp.i
 .PHONY : __/module/tinyxml/tinystr.cpp.i
 
 __/module/tinyxml/tinystr.s: __/module/tinyxml/tinystr.cpp.s
@@ -277,7 +274,7 @@ __/module/tinyxml/tinystr.s: __/module/tinyxml/tinystr.cpp.s
 
 # target to generate assembly for a file
 __/module/tinyxml/tinystr.cpp.s:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinystr.cpp.s
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinystr.cpp.s
 .PHONY : __/module/tinyxml/tinystr.cpp.s
 
 __/module/tinyxml/tinyxml.o: __/module/tinyxml/tinyxml.cpp.o
@@ -285,7 +282,7 @@ __/module/tinyxml/tinyxml.o: __/module/tinyxml/tinyxml.cpp.o
 
 # target to build an object file
 __/module/tinyxml/tinyxml.cpp.o:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinyxml.cpp.o
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinyxml.cpp.o
 .PHONY : __/module/tinyxml/tinyxml.cpp.o
 
 __/module/tinyxml/tinyxml.i: __/module/tinyxml/tinyxml.cpp.i
@@ -293,7 +290,7 @@ __/module/tinyxml/tinyxml.i: __/module/tinyxml/tinyxml.cpp.i
 
 # target to preprocess a source file
 __/module/tinyxml/tinyxml.cpp.i:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinyxml.cpp.i
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinyxml.cpp.i
 .PHONY : __/module/tinyxml/tinyxml.cpp.i
 
 __/module/tinyxml/tinyxml.s: __/module/tinyxml/tinyxml.cpp.s
@@ -301,7 +298,7 @@ __/module/tinyxml/tinyxml.s: __/module/tinyxml/tinyxml.cpp.s
 
 # target to generate assembly for a file
 __/module/tinyxml/tinyxml.cpp.s:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinyxml.cpp.s
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinyxml.cpp.s
 .PHONY : __/module/tinyxml/tinyxml.cpp.s
 
 __/module/tinyxml/tinyxmlerror.o: __/module/tinyxml/tinyxmlerror.cpp.o
@@ -309,7 +306,7 @@ __/module/tinyxml/tinyxmlerror.o: __/module/tinyxml/tinyxmlerror.cpp.o
 
 # target to build an object file
 __/module/tinyxml/tinyxmlerror.cpp.o:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinyxmlerror.cpp.o
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinyxmlerror.cpp.o
 .PHONY : __/module/tinyxml/tinyxmlerror.cpp.o
 
 __/module/tinyxml/tinyxmlerror.i: __/module/tinyxml/tinyxmlerror.cpp.i
@@ -317,7 +314,7 @@ __/module/tinyxml/tinyxmlerror.i: __/module/tinyxml/tinyxmlerror.cpp.i
 
 # target to preprocess a source file
 __/module/tinyxml/tinyxmlerror.cpp.i:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinyxmlerror.cpp.i
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinyxmlerror.cpp.i
 .PHONY : __/module/tinyxml/tinyxmlerror.cpp.i
 
 __/module/tinyxml/tinyxmlerror.s: __/module/tinyxml/tinyxmlerror.cpp.s
@@ -325,7 +322,7 @@ __/module/tinyxml/tinyxmlerror.s: __/module/tinyxml/tinyxmlerror.cpp.s
 
 # target to generate assembly for a file
 __/module/tinyxml/tinyxmlerror.cpp.s:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinyxmlerror.cpp.s
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinyxmlerror.cpp.s
 .PHONY : __/module/tinyxml/tinyxmlerror.cpp.s
 
 __/module/tinyxml/tinyxmlparser.o: __/module/tinyxml/tinyxmlparser.cpp.o
@@ -333,7 +330,7 @@ __/module/tinyxml/tinyxmlparser.o: __/module/tinyxml/tinyxmlparser.cpp.o
 
 # target to build an object file
 __/module/tinyxml/tinyxmlparser.cpp.o:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinyxmlparser.cpp.o
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinyxmlparser.cpp.o
 .PHONY : __/module/tinyxml/tinyxmlparser.cpp.o
 
 __/module/tinyxml/tinyxmlparser.i: __/module/tinyxml/tinyxmlparser.cpp.i
@@ -341,7 +338,7 @@ __/module/tinyxml/tinyxmlparser.i: __/module/tinyxml/tinyxmlparser.cpp.i
 
 # target to preprocess a source file
 __/module/tinyxml/tinyxmlparser.cpp.i:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinyxmlparser.cpp.i
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinyxmlparser.cpp.i
 .PHONY : __/module/tinyxml/tinyxmlparser.cpp.i
 
 __/module/tinyxml/tinyxmlparser.s: __/module/tinyxml/tinyxmlparser.cpp.s
@@ -349,7 +346,7 @@ __/module/tinyxml/tinyxmlparser.s: __/module/tinyxml/tinyxmlparser.cpp.s
 
 # target to generate assembly for a file
 __/module/tinyxml/tinyxmlparser.cpp.s:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinyxmlparser.cpp.s
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/tinyxml/tinyxmlparser.cpp.s
 .PHONY : __/module/tinyxml/tinyxmlparser.cpp.s
 
 __/module/xml_wrapper/XML.o: __/module/xml_wrapper/XML.cpp.o
@@ -357,7 +354,7 @@ __/module/xml_wrapper/XML.o: __/module/xml_wrapper/XML.cpp.o
 
 # target to build an object file
 __/module/xml_wrapper/XML.cpp.o:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/xml_wrapper/XML.cpp.o
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/xml_wrapper/XML.cpp.o
 .PHONY : __/module/xml_wrapper/XML.cpp.o
 
 __/module/xml_wrapper/XML.i: __/module/xml_wrapper/XML.cpp.i
@@ -365,7 +362,7 @@ __/module/xml_wrapper/XML.i: __/module/xml_wrapper/XML.cpp.i
 
 # target to preprocess a source file
 __/module/xml_wrapper/XML.cpp.i:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/xml_wrapper/XML.cpp.i
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/xml_wrapper/XML.cpp.i
 .PHONY : __/module/xml_wrapper/XML.cpp.i
 
 __/module/xml_wrapper/XML.s: __/module/xml_wrapper/XML.cpp.s
@@ -373,7 +370,7 @@ __/module/xml_wrapper/XML.s: __/module/xml_wrapper/XML.cpp.s
 
 # target to generate assembly for a file
 __/module/xml_wrapper/XML.cpp.s:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/xml_wrapper/XML.cpp.s
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/__/module/xml_wrapper/XML.cpp.s
 .PHONY : __/module/xml_wrapper/XML.cpp.s
 
 main.o: main.cpp.o
@@ -381,7 +378,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/main.cpp.o
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -389,7 +386,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/main.cpp.i
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -397,7 +394,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/main.cpp.s
+	cd /home/share/xml_load && $(MAKE) -f bin/CMakeFiles/module.dir/build.make bin/CMakeFiles/module.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -456,6 +453,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/share/xml_load && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

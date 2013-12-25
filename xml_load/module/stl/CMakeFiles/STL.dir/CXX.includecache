@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/mnt/smb/Fsy412-s-repository-/xml_load/module/stl/stl_queue.cpp
+/home/share/xml_load/module/stl/stl_queue.cpp
 stl_queue.hpp
-/mnt/smb/Fsy412-s-repository-/xml_load/module/stl/stl_queue.hpp
+/home/share/xml_load/module/stl/stl_queue.hpp
 
-/mnt/smb/Fsy412-s-repository-/xml_load/module/stl/stl_queue.hpp
+/home/share/xml_load/module/stl/stl_queue.hpp
 stdio.h
 -
 stdlib.h

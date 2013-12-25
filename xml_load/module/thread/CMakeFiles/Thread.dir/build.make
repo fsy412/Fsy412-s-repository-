@@ -26,19 +26,16 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E remove -f
-
-# Escaping for special characters.
-EQUALS = =
+RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/smb/Fsy412-s-repository-/xml_load
+CMAKE_SOURCE_DIR = /home/share/xml_load
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/smb/Fsy412-s-repository-/xml_load
+CMAKE_BINARY_DIR = /home/share/xml_load
 
 # Include any dependencies generated for this target.
 include module/thread/CMakeFiles/Thread.dir/depend.make
@@ -49,19 +46,42 @@ include module/thread/CMakeFiles/Thread.dir/progress.make
 # Include the compile flags for this target's objects.
 include module/thread/CMakeFiles/Thread.dir/flags.make
 
+module/thread/CMakeFiles/Thread.dir/mutex.cpp.o: module/thread/CMakeFiles/Thread.dir/flags.make
+module/thread/CMakeFiles/Thread.dir/mutex.cpp.o: module/thread/mutex.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/share/xml_load/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object module/thread/CMakeFiles/Thread.dir/mutex.cpp.o"
+	cd /home/share/xml_load/module/thread && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Thread.dir/mutex.cpp.o -c /home/share/xml_load/module/thread/mutex.cpp
+
+module/thread/CMakeFiles/Thread.dir/mutex.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Thread.dir/mutex.cpp.i"
+	cd /home/share/xml_load/module/thread && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/share/xml_load/module/thread/mutex.cpp > CMakeFiles/Thread.dir/mutex.cpp.i
+
+module/thread/CMakeFiles/Thread.dir/mutex.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Thread.dir/mutex.cpp.s"
+	cd /home/share/xml_load/module/thread && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/share/xml_load/module/thread/mutex.cpp -o CMakeFiles/Thread.dir/mutex.cpp.s
+
+module/thread/CMakeFiles/Thread.dir/mutex.cpp.o.requires:
+.PHONY : module/thread/CMakeFiles/Thread.dir/mutex.cpp.o.requires
+
+module/thread/CMakeFiles/Thread.dir/mutex.cpp.o.provides: module/thread/CMakeFiles/Thread.dir/mutex.cpp.o.requires
+	$(MAKE) -f module/thread/CMakeFiles/Thread.dir/build.make module/thread/CMakeFiles/Thread.dir/mutex.cpp.o.provides.build
+.PHONY : module/thread/CMakeFiles/Thread.dir/mutex.cpp.o.provides
+
+module/thread/CMakeFiles/Thread.dir/mutex.cpp.o.provides.build: module/thread/CMakeFiles/Thread.dir/mutex.cpp.o
+
 module/thread/CMakeFiles/Thread.dir/semaphore.cpp.o: module/thread/CMakeFiles/Thread.dir/flags.make
 module/thread/CMakeFiles/Thread.dir/semaphore.cpp.o: module/thread/semaphore.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /mnt/smb/Fsy412-s-repository-/xml_load/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/share/xml_load/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object module/thread/CMakeFiles/Thread.dir/semaphore.cpp.o"
-	cd /mnt/smb/Fsy412-s-repository-/xml_load/module/thread && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Thread.dir/semaphore.cpp.o -c /mnt/smb/Fsy412-s-repository-/xml_load/module/thread/semaphore.cpp
+	cd /home/share/xml_load/module/thread && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Thread.dir/semaphore.cpp.o -c /home/share/xml_load/module/thread/semaphore.cpp
 
 module/thread/CMakeFiles/Thread.dir/semaphore.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Thread.dir/semaphore.cpp.i"
-	cd /mnt/smb/Fsy412-s-repository-/xml_load/module/thread && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /mnt/smb/Fsy412-s-repository-/xml_load/module/thread/semaphore.cpp > CMakeFiles/Thread.dir/semaphore.cpp.i
+	cd /home/share/xml_load/module/thread && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/share/xml_load/module/thread/semaphore.cpp > CMakeFiles/Thread.dir/semaphore.cpp.i
 
 module/thread/CMakeFiles/Thread.dir/semaphore.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Thread.dir/semaphore.cpp.s"
-	cd /mnt/smb/Fsy412-s-repository-/xml_load/module/thread && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /mnt/smb/Fsy412-s-repository-/xml_load/module/thread/semaphore.cpp -o CMakeFiles/Thread.dir/semaphore.cpp.s
+	cd /home/share/xml_load/module/thread && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/share/xml_load/module/thread/semaphore.cpp -o CMakeFiles/Thread.dir/semaphore.cpp.s
 
 module/thread/CMakeFiles/Thread.dir/semaphore.cpp.o.requires:
 .PHONY : module/thread/CMakeFiles/Thread.dir/semaphore.cpp.o.requires
@@ -74,17 +94,17 @@ module/thread/CMakeFiles/Thread.dir/semaphore.cpp.o.provides.build: module/threa
 
 module/thread/CMakeFiles/Thread.dir/thread.cpp.o: module/thread/CMakeFiles/Thread.dir/flags.make
 module/thread/CMakeFiles/Thread.dir/thread.cpp.o: module/thread/thread.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /mnt/smb/Fsy412-s-repository-/xml_load/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/share/xml_load/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object module/thread/CMakeFiles/Thread.dir/thread.cpp.o"
-	cd /mnt/smb/Fsy412-s-repository-/xml_load/module/thread && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Thread.dir/thread.cpp.o -c /mnt/smb/Fsy412-s-repository-/xml_load/module/thread/thread.cpp
+	cd /home/share/xml_load/module/thread && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Thread.dir/thread.cpp.o -c /home/share/xml_load/module/thread/thread.cpp
 
 module/thread/CMakeFiles/Thread.dir/thread.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Thread.dir/thread.cpp.i"
-	cd /mnt/smb/Fsy412-s-repository-/xml_load/module/thread && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /mnt/smb/Fsy412-s-repository-/xml_load/module/thread/thread.cpp > CMakeFiles/Thread.dir/thread.cpp.i
+	cd /home/share/xml_load/module/thread && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/share/xml_load/module/thread/thread.cpp > CMakeFiles/Thread.dir/thread.cpp.i
 
 module/thread/CMakeFiles/Thread.dir/thread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Thread.dir/thread.cpp.s"
-	cd /mnt/smb/Fsy412-s-repository-/xml_load/module/thread && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /mnt/smb/Fsy412-s-repository-/xml_load/module/thread/thread.cpp -o CMakeFiles/Thread.dir/thread.cpp.s
+	cd /home/share/xml_load/module/thread && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/share/xml_load/module/thread/thread.cpp -o CMakeFiles/Thread.dir/thread.cpp.s
 
 module/thread/CMakeFiles/Thread.dir/thread.cpp.o.requires:
 .PHONY : module/thread/CMakeFiles/Thread.dir/thread.cpp.o.requires
@@ -95,61 +115,38 @@ module/thread/CMakeFiles/Thread.dir/thread.cpp.o.provides: module/thread/CMakeFi
 
 module/thread/CMakeFiles/Thread.dir/thread.cpp.o.provides.build: module/thread/CMakeFiles/Thread.dir/thread.cpp.o
 
-module/thread/CMakeFiles/Thread.dir/mutex.cpp.o: module/thread/CMakeFiles/Thread.dir/flags.make
-module/thread/CMakeFiles/Thread.dir/mutex.cpp.o: module/thread/mutex.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /mnt/smb/Fsy412-s-repository-/xml_load/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object module/thread/CMakeFiles/Thread.dir/mutex.cpp.o"
-	cd /mnt/smb/Fsy412-s-repository-/xml_load/module/thread && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Thread.dir/mutex.cpp.o -c /mnt/smb/Fsy412-s-repository-/xml_load/module/thread/mutex.cpp
-
-module/thread/CMakeFiles/Thread.dir/mutex.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Thread.dir/mutex.cpp.i"
-	cd /mnt/smb/Fsy412-s-repository-/xml_load/module/thread && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /mnt/smb/Fsy412-s-repository-/xml_load/module/thread/mutex.cpp > CMakeFiles/Thread.dir/mutex.cpp.i
-
-module/thread/CMakeFiles/Thread.dir/mutex.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Thread.dir/mutex.cpp.s"
-	cd /mnt/smb/Fsy412-s-repository-/xml_load/module/thread && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /mnt/smb/Fsy412-s-repository-/xml_load/module/thread/mutex.cpp -o CMakeFiles/Thread.dir/mutex.cpp.s
-
-module/thread/CMakeFiles/Thread.dir/mutex.cpp.o.requires:
-.PHONY : module/thread/CMakeFiles/Thread.dir/mutex.cpp.o.requires
-
-module/thread/CMakeFiles/Thread.dir/mutex.cpp.o.provides: module/thread/CMakeFiles/Thread.dir/mutex.cpp.o.requires
-	$(MAKE) -f module/thread/CMakeFiles/Thread.dir/build.make module/thread/CMakeFiles/Thread.dir/mutex.cpp.o.provides.build
-.PHONY : module/thread/CMakeFiles/Thread.dir/mutex.cpp.o.provides
-
-module/thread/CMakeFiles/Thread.dir/mutex.cpp.o.provides.build: module/thread/CMakeFiles/Thread.dir/mutex.cpp.o
-
 # Object files for target Thread
 Thread_OBJECTS = \
+"CMakeFiles/Thread.dir/mutex.cpp.o" \
 "CMakeFiles/Thread.dir/semaphore.cpp.o" \
-"CMakeFiles/Thread.dir/thread.cpp.o" \
-"CMakeFiles/Thread.dir/mutex.cpp.o"
+"CMakeFiles/Thread.dir/thread.cpp.o"
 
 # External object files for target Thread
 Thread_EXTERNAL_OBJECTS =
 
+module/thread/libThread.a: module/thread/CMakeFiles/Thread.dir/mutex.cpp.o
 module/thread/libThread.a: module/thread/CMakeFiles/Thread.dir/semaphore.cpp.o
 module/thread/libThread.a: module/thread/CMakeFiles/Thread.dir/thread.cpp.o
-module/thread/libThread.a: module/thread/CMakeFiles/Thread.dir/mutex.cpp.o
 module/thread/libThread.a: module/thread/CMakeFiles/Thread.dir/build.make
 module/thread/libThread.a: module/thread/CMakeFiles/Thread.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libThread.a"
-	cd /mnt/smb/Fsy412-s-repository-/xml_load/module/thread && $(CMAKE_COMMAND) -P CMakeFiles/Thread.dir/cmake_clean_target.cmake
-	cd /mnt/smb/Fsy412-s-repository-/xml_load/module/thread && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Thread.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/share/xml_load/module/thread && $(CMAKE_COMMAND) -P CMakeFiles/Thread.dir/cmake_clean_target.cmake
+	cd /home/share/xml_load/module/thread && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Thread.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 module/thread/CMakeFiles/Thread.dir/build: module/thread/libThread.a
 .PHONY : module/thread/CMakeFiles/Thread.dir/build
 
+module/thread/CMakeFiles/Thread.dir/requires: module/thread/CMakeFiles/Thread.dir/mutex.cpp.o.requires
 module/thread/CMakeFiles/Thread.dir/requires: module/thread/CMakeFiles/Thread.dir/semaphore.cpp.o.requires
 module/thread/CMakeFiles/Thread.dir/requires: module/thread/CMakeFiles/Thread.dir/thread.cpp.o.requires
-module/thread/CMakeFiles/Thread.dir/requires: module/thread/CMakeFiles/Thread.dir/mutex.cpp.o.requires
 .PHONY : module/thread/CMakeFiles/Thread.dir/requires
 
 module/thread/CMakeFiles/Thread.dir/clean:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load/module/thread && $(CMAKE_COMMAND) -P CMakeFiles/Thread.dir/cmake_clean.cmake
+	cd /home/share/xml_load/module/thread && $(CMAKE_COMMAND) -P CMakeFiles/Thread.dir/cmake_clean.cmake
 .PHONY : module/thread/CMakeFiles/Thread.dir/clean
 
 module/thread/CMakeFiles/Thread.dir/depend:
-	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/smb/Fsy412-s-repository-/xml_load /mnt/smb/Fsy412-s-repository-/xml_load/module/thread /mnt/smb/Fsy412-s-repository-/xml_load /mnt/smb/Fsy412-s-repository-/xml_load/module/thread /mnt/smb/Fsy412-s-repository-/xml_load/module/thread/CMakeFiles/Thread.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/share/xml_load && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/share/xml_load /home/share/xml_load/module/thread /home/share/xml_load /home/share/xml_load/module/thread /home/share/xml_load/module/thread/CMakeFiles/Thread.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : module/thread/CMakeFiles/Thread.dir/depend
 
