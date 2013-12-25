@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<attrs>
+	<HUAWEI vid="2011">
+		<Input-Peak-Rate value="1" type="integer"/>
+		<Input-Average-Rate value="2" type="integer"/>
+		<Input-Basic-Rate value="3" type="integer"/>
+		<Output-Peak-Rate value="4" type="integer"/>
+		<Output-Average-Rate value="5" type="integer"/>
+		<Output-Basic-Rate value="6" type="integer"/>
+		<Remanent-Volume value="15" type="integer"/>
+		<Priority value="22" type="integer"/>
+		<Version value="254" type="string"/>
+		<Product-ID value="255" type="string"/>
+	</HUAWEI>
+</attrs>

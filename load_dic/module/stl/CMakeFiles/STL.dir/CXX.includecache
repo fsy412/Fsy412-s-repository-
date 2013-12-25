@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/smb/load_dic/module/stl/stl_queue.cpp
+stl_queue.hpp
+/mnt/smb/load_dic/module/stl/stl_queue.hpp
+
+/mnt/smb/load_dic/module/stl/stl_queue.hpp
+stdio.h
+-
+stdlib.h
+-
+iostream
+-
+exception
+-
+stdexcept
+-
+

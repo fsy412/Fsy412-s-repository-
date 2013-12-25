@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/PBU1-RADIUS/!svn/ver/5694/DEV/sql_parse/module/configmanager
+END
+configmanager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/PBU1-RADIUS/!svn/ver/5694/DEV/sql_parse/module/configmanager/configmanager.cpp
+END
+configmanager.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/PBU1-RADIUS/!svn/ver/5694/DEV/sql_parse/module/configmanager/configmanager.hpp
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/PBU1-RADIUS/!svn/ver/5694/DEV/sql_parse/module/configmanager/CMakeLists.txt
+END

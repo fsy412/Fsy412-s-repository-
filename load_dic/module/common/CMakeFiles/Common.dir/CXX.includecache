@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/smb/load_dic/module/common/common.cpp
+common.hpp
+/mnt/smb/load_dic/module/common/common.hpp
+
+/mnt/smb/load_dic/module/common/common.hpp
+time.h
+-
+ctype.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+windows.h
+-
+process.h
+-
+unistd.h
+-
+sys/time.h
+-
+unistd.h
+-
+pthread.h
+-
+semaphore.h
+-
+

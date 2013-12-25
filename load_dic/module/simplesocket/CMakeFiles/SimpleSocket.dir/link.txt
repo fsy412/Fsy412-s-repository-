@@ -1,0 +1,2 @@
+/usr/bin/ar cr libSimpleSocket.a  CMakeFiles/SimpleSocket.dir/simplesocket/socket_tcp.cpp.o CMakeFiles/SimpleSocket.dir/simplesocket/tcp_server.cpp.o CMakeFiles/SimpleSocket.dir/simplesocket/udp_server.cpp.o CMakeFiles/SimpleSocket.dir/simplesocket/socket_base.cpp.o CMakeFiles/SimpleSocket.dir/simplesocket/socket_udp.cpp.o
+/usr/bin/ranlib libSimpleSocket.a

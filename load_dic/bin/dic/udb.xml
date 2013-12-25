@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<attrs>
+	<udb vid="10189">
+		<UDB-User-Status value="1" type="string"/>
+		<UDB-User-Name value="2" type="string"/>
+		<UDB-User-Password value="3" type="string"/>		
+	</udb>
+</attrs>

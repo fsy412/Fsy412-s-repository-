@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/PBU1-RADIUS/!svn/ver/5694/DEV/sql_parse/module/tinyxml
+END
+tinyxmlerror.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/PBU1-RADIUS/!svn/ver/5694/DEV/sql_parse/module/tinyxml/tinyxmlerror.cpp
+END
+tinystr.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/PBU1-RADIUS/!svn/ver/5694/DEV/sql_parse/module/tinyxml/tinystr.h
+END
+tinyxmlparser.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/PBU1-RADIUS/!svn/ver/5694/DEV/sql_parse/module/tinyxml/tinyxmlparser.cpp
+END
+tinyxml.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/PBU1-RADIUS/!svn/ver/5694/DEV/sql_parse/module/tinyxml/tinyxml.cpp
+END
+tinyxml.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/PBU1-RADIUS/!svn/ver/5694/DEV/sql_parse/module/tinyxml/tinyxml.h
+END
+tinystr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/PBU1-RADIUS/!svn/ver/5694/DEV/sql_parse/module/tinyxml/tinystr.cpp
+END

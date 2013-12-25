@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<attrs>
+	<cisco vid="9">
+		<Cisco-Tunnel-Type value="64" type="string"/>
+		<Cisco-Tunnel-Medium-Type value="65" type="integer"/>
+		<Cisco-Tunnel-Private-Group-ID value="81" type="string"/>
+		<Cisco-Avpair value="1" type="string"/>
+		<Cisco-Multilink-ID value="187" type="integer"/>
+		<Cisco-Num-In-Multilink value="188" type="integer"/>
+		<Cisco-Pre-Input-Octets value="190" type="integer"/>
+		<Cisco-Pre-Output-Octets value="191" type="integer"/>
+		<Cisco-Pre-Input-Packets value="192" type="integer"/>
+		<Cisco-Pre-Output-Packets value="193" type="integer"/>
+		<Cisco-Maximum-Time value="194" type="integer"/>
+		<Cisco-Disconnect-Cause  value="195" type="integer"/>
+		<Cisco-Data-Rate value="197" type="integer"/>
+		<Cisco-PreSession-Time value="198" type="integer"/>
+		<Cisco-PW-Lifetime value="208" type="integer"/>
+		<Cisco-IP-Direct value="209" type="integer"/>
+		<Cisco-PPP-VJ-Slot-Comp  value="210" type="integer"/>
+		<Cisco-PPP-Async-Map value="212" type="integer"/>
+		<Cisco-IP-Pool-Definition value="217" type="integer"/>
+		<Cisco-Asing-IP-Pool value="218" type="integer"/>
+		<Cisco-Route-IP value="228" type="integer"/>
+		<Cisco-Link-Compression value="233" type="integer"/>
+		<Cisco-Target-Util value="234" type="integer"/>
+		<Cisco-Maximum-Channels  value="235" type="integer"/>
+		<Cisco-Data-Filter value="242" type="integer"/>
+		<Cisco-Call-Filter value="243" type="integer"/>
+		<Cisco-Idle-Limit value="244" type="integer"/>
+		<Cisco-Xmit-Rate value="255" type="integer"/>
+		<Context-Name value="251" type="string"/>
+	</cisco>
+</attrs>
