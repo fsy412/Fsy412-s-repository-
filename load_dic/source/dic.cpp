@@ -5,13 +5,13 @@ namespace ghca{
  
 int dictionary::scan(std::string path)
 {
-    DIR              *pDir ;  
-    
+	DIR              *pDir ;  
+	
     struct dirent    *ent  ;  
     
-    int               i=0  ;  
+	int               i=0  ;  
     
-    char              childpath[512];  
+	char              childpath[512];  
  
     pDir=opendir(path.c_str());  
 	
@@ -218,6 +218,7 @@ int dictionary::scan(std::string path)
 				
 				if (!doc.LoadFile(name.c_str()))
 				{
+				
 					std::cout << "load xml failed!" << std::endl;
 					
 					return 1;
