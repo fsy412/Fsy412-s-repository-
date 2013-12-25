@@ -5,9 +5,6 @@ namespace ghca{
  
 int dictionary::scan(std::string path)
 {
-
-
-
     DIR              *pDir ;  
     
     struct dirent    *ent  ;  
