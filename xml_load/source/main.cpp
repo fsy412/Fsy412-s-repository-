@@ -12,7 +12,7 @@
 
 int main()
 {
-	TiXmlDocument doc("app.xml");
+	TiXmlDocument doc("rfc.xml");
 	if (!doc.LoadFile())
 	{
 		std::cout<<"failed to load file"<<std::endl;
@@ -24,7 +24,8 @@ int main()
 	TiXmlElement* pElementtmp=NULL;
 
 	pElementtmp=	pcrElement->FirstChildElement();;
-
+	//pElementtmp = pcrElement->FirstChild("rfc")->ToElement();
+	//pElementtmp=pElementtmp->NextSiblingElement();
 	std::cout<<"traval root "<<std::endl;
 	while(pElementtmp)
 	{
@@ -39,13 +40,11 @@ int main()
 		pchild = pElementtmp->FirstChildElement();
 		while(pchild)
 		{
-			std::cout << pchild->Value()<<std::endl;
-			if (strcmp(pchild->Value(),"port" ) ==  0)
-			{
-				std::cout<<"attr "<<pchild->Attribute("name")<<std::endl;
-			}
+			std::cout << "Attr:"<<pchild->Value()<<std::endl;
+ 
 			
-
+			std::cout<<"value "<<pchild->Attribute("value")<<std::endl;
+			std::cout<<"type "<<pchild->Attribute("type")<<std::endl;
 			pchild = pchild ->NextSiblingElement();
 		}
 
@@ -58,17 +57,17 @@ int main()
 
 	//doc.Print();
 
-	CXML xml;
-	if (xml.ParseXmlFile("/home/share/xml_load/bin/app.xml"))
-	{
-		std::cout<<"xml load OK"<<std::endl;
-	}
-	std::string value;
-	int ret = xml.getFirstElementValue("port", value);
+	// CXML xml;
+	// if (xml.ParseXmlFile("/home/share/xml_load/bin/app.xml"))
+	// {
+		// std::cout<<"xml load OK"<<std::endl;
+	// }
+	// std::string value;
+	// int ret = xml.getFirstElementValue("port", value);
 
-	if (ret )
-	{
-		std::cout<<value<<std::endl;
-	}
+	// if (ret )
+	// {
+		// std::cout<<value<<std::endl;
+	// }
 	return 0;
 }

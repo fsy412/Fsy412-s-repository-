@@ -30,16 +30,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
+
+# Escaping for special characters.
+EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/share/xml_load
+CMAKE_SOURCE_DIR = /mnt/smb/Fsy412-s-repository-/xml_load
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/share/xml_load
+CMAKE_BINARY_DIR = /mnt/smb/Fsy412-s-repository-/xml_load
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -47,7 +50,7 @@ CMAKE_BINARY_DIR = /home/share/xml_load
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
-	/usr/bin/cmake -i .
+	/usr/local/bin/cmake -i .
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -57,7 +60,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -66,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/share/xml_load && $(CMAKE_COMMAND) -E cmake_progress_start /home/share/xml_load/CMakeFiles /home/share/xml_load/module/queue/CMakeFiles/progress.marks
-	cd /home/share/xml_load && $(MAKE) -f CMakeFiles/Makefile2 module/queue/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/share/xml_load/CMakeFiles 0
+	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/smb/Fsy412-s-repository-/xml_load/CMakeFiles /mnt/smb/Fsy412-s-repository-/xml_load/module/queue/CMakeFiles/progress.marks
+	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f CMakeFiles/Makefile2 module/queue/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/smb/Fsy412-s-repository-/xml_load/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/share/xml_load && $(MAKE) -f CMakeFiles/Makefile2 module/queue/clean
+	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f CMakeFiles/Makefile2 module/queue/clean
 .PHONY : clean
 
 # The main clean target
@@ -82,22 +85,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/share/xml_load && $(MAKE) -f CMakeFiles/Makefile2 module/queue/preinstall
+	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f CMakeFiles/Makefile2 module/queue/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/share/xml_load && $(MAKE) -f CMakeFiles/Makefile2 module/queue/preinstall
+	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f CMakeFiles/Makefile2 module/queue/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/share/xml_load && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 module/queue/CMakeFiles/Queue.dir/rule:
-	cd /home/share/xml_load && $(MAKE) -f CMakeFiles/Makefile2 module/queue/CMakeFiles/Queue.dir/rule
+	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f CMakeFiles/Makefile2 module/queue/CMakeFiles/Queue.dir/rule
 .PHONY : module/queue/CMakeFiles/Queue.dir/rule
 
 # Convenience name for target.
@@ -106,7 +109,7 @@ Queue: module/queue/CMakeFiles/Queue.dir/rule
 
 # fast build rule for target.
 Queue/fast:
-	cd /home/share/xml_load && $(MAKE) -f module/queue/CMakeFiles/Queue.dir/build.make module/queue/CMakeFiles/Queue.dir/build
+	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f module/queue/CMakeFiles/Queue.dir/build.make module/queue/CMakeFiles/Queue.dir/build
 .PHONY : Queue/fast
 
 queue.o: queue.cpp.o
@@ -114,7 +117,7 @@ queue.o: queue.cpp.o
 
 # target to build an object file
 queue.cpp.o:
-	cd /home/share/xml_load && $(MAKE) -f module/queue/CMakeFiles/Queue.dir/build.make module/queue/CMakeFiles/Queue.dir/queue.cpp.o
+	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f module/queue/CMakeFiles/Queue.dir/build.make module/queue/CMakeFiles/Queue.dir/queue.cpp.o
 .PHONY : queue.cpp.o
 
 queue.i: queue.cpp.i
@@ -122,7 +125,7 @@ queue.i: queue.cpp.i
 
 # target to preprocess a source file
 queue.cpp.i:
-	cd /home/share/xml_load && $(MAKE) -f module/queue/CMakeFiles/Queue.dir/build.make module/queue/CMakeFiles/Queue.dir/queue.cpp.i
+	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f module/queue/CMakeFiles/Queue.dir/build.make module/queue/CMakeFiles/Queue.dir/queue.cpp.i
 .PHONY : queue.cpp.i
 
 queue.s: queue.cpp.s
@@ -130,7 +133,7 @@ queue.s: queue.cpp.s
 
 # target to generate assembly for a file
 queue.cpp.s:
-	cd /home/share/xml_load && $(MAKE) -f module/queue/CMakeFiles/Queue.dir/build.make module/queue/CMakeFiles/Queue.dir/queue.cpp.s
+	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f module/queue/CMakeFiles/Queue.dir/build.make module/queue/CMakeFiles/Queue.dir/queue.cpp.s
 .PHONY : queue.cpp.s
 
 t_queue.o: t_queue.cpp.o
@@ -138,7 +141,7 @@ t_queue.o: t_queue.cpp.o
 
 # target to build an object file
 t_queue.cpp.o:
-	cd /home/share/xml_load && $(MAKE) -f module/queue/CMakeFiles/Queue.dir/build.make module/queue/CMakeFiles/Queue.dir/t_queue.cpp.o
+	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f module/queue/CMakeFiles/Queue.dir/build.make module/queue/CMakeFiles/Queue.dir/t_queue.cpp.o
 .PHONY : t_queue.cpp.o
 
 t_queue.i: t_queue.cpp.i
@@ -146,7 +149,7 @@ t_queue.i: t_queue.cpp.i
 
 # target to preprocess a source file
 t_queue.cpp.i:
-	cd /home/share/xml_load && $(MAKE) -f module/queue/CMakeFiles/Queue.dir/build.make module/queue/CMakeFiles/Queue.dir/t_queue.cpp.i
+	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f module/queue/CMakeFiles/Queue.dir/build.make module/queue/CMakeFiles/Queue.dir/t_queue.cpp.i
 .PHONY : t_queue.cpp.i
 
 t_queue.s: t_queue.cpp.s
@@ -154,7 +157,7 @@ t_queue.s: t_queue.cpp.s
 
 # target to generate assembly for a file
 t_queue.cpp.s:
-	cd /home/share/xml_load && $(MAKE) -f module/queue/CMakeFiles/Queue.dir/build.make module/queue/CMakeFiles/Queue.dir/t_queue.cpp.s
+	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(MAKE) -f module/queue/CMakeFiles/Queue.dir/build.make module/queue/CMakeFiles/Queue.dir/t_queue.cpp.s
 .PHONY : t_queue.cpp.s
 
 # Help Target
@@ -183,6 +186,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/share/xml_load && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/smb/Fsy412-s-repository-/xml_load && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

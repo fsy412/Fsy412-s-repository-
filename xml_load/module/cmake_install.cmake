@@ -1,4 +1,4 @@
-# Install script for directory: /home/share/xml_load/module
+# Install script for directory: /mnt/smb/Fsy412-s-repository-/xml_load/module
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,13 +34,13 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/home/share/xml_load/module/tinyxml/cmake_install.cmake")
-  INCLUDE("/home/share/xml_load/module/stl/cmake_install.cmake")
-  INCLUDE("/home/share/xml_load/module/queue/cmake_install.cmake")
-  INCLUDE("/home/share/xml_load/module/common/cmake_install.cmake")
-  INCLUDE("/home/share/xml_load/module/thread/cmake_install.cmake")
-  INCLUDE("/home/share/xml_load/module/simplesocket/cmake_install.cmake")
-  INCLUDE("/home/share/xml_load/module/configmanager/cmake_install.cmake")
+  INCLUDE("/mnt/smb/Fsy412-s-repository-/xml_load/module/tinyxml/cmake_install.cmake")
+  INCLUDE("/mnt/smb/Fsy412-s-repository-/xml_load/module/stl/cmake_install.cmake")
+  INCLUDE("/mnt/smb/Fsy412-s-repository-/xml_load/module/queue/cmake_install.cmake")
+  INCLUDE("/mnt/smb/Fsy412-s-repository-/xml_load/module/common/cmake_install.cmake")
+  INCLUDE("/mnt/smb/Fsy412-s-repository-/xml_load/module/thread/cmake_install.cmake")
+  INCLUDE("/mnt/smb/Fsy412-s-repository-/xml_load/module/simplesocket/cmake_install.cmake")
+  INCLUDE("/mnt/smb/Fsy412-s-repository-/xml_load/module/configmanager/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

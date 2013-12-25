@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/Thread.dir/mutex.cpp.o"
   "CMakeFiles/Thread.dir/semaphore.cpp.o"
   "CMakeFiles/Thread.dir/thread.cpp.o"
+  "CMakeFiles/Thread.dir/mutex.cpp.o"
   "libThread.pdb"
   "libThread.a"
 )

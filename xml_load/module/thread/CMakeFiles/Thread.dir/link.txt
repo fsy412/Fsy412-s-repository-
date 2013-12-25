@@ -1,2 +1,2 @@
-/usr/bin/ar cr libThread.a  CMakeFiles/Thread.dir/mutex.cpp.o CMakeFiles/Thread.dir/semaphore.cpp.o CMakeFiles/Thread.dir/thread.cpp.o
+/usr/bin/ar cr libThread.a  CMakeFiles/Thread.dir/semaphore.cpp.o CMakeFiles/Thread.dir/thread.cpp.o CMakeFiles/Thread.dir/mutex.cpp.o
 /usr/bin/ranlib libThread.a

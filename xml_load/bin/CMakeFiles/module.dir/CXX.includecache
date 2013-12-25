@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/share/xml_load/source/main.cpp
+/mnt/smb/Fsy412-s-repository-/xml_load/source/main.cpp
 iostream
 -
 tinyxml.h

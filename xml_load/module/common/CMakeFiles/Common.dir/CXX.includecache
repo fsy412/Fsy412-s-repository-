@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/share/xml_load/module/common/common.cpp
+/mnt/smb/Fsy412-s-repository-/xml_load/module/common/common.cpp
 common.hpp
-/home/share/xml_load/module/common/common.hpp
+/mnt/smb/Fsy412-s-repository-/xml_load/module/common/common.hpp
 
-/home/share/xml_load/module/common/common.hpp
+/mnt/smb/Fsy412-s-repository-/xml_load/module/common/common.hpp
 time.h
 -
 ctype.h

@@ -4,13 +4,22 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/share/xml_load/module/queue/queue.cpp" "/home/share/xml_load/module/queue/CMakeFiles/Queue.dir/queue.cpp.o"
-  "/home/share/xml_load/module/queue/t_queue.cpp" "/home/share/xml_load/module/queue/CMakeFiles/Queue.dir/t_queue.cpp.o"
+  "/mnt/smb/Fsy412-s-repository-/xml_load/module/queue/queue.cpp" "/mnt/smb/Fsy412-s-repository-/xml_load/module/queue/CMakeFiles/Queue.dir/queue.cpp.o"
+  "/mnt/smb/Fsy412-s-repository-/xml_load/module/queue/t_queue.cpp" "/mnt/smb/Fsy412-s-repository-/xml_load/module/queue/CMakeFiles/Queue.dir/t_queue.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/share/xml_load/module/common/CMakeFiles/Common.dir/DependInfo.cmake"
-  "/home/share/xml_load/module/thread/CMakeFiles/Thread.dir/DependInfo.cmake"
+  "/mnt/smb/Fsy412-s-repository-/xml_load/module/common/CMakeFiles/Common.dir/DependInfo.cmake"
+  "/mnt/smb/Fsy412-s-repository-/xml_load/module/thread/CMakeFiles/Thread.dir/DependInfo.cmake"
   )
+
+# The include file search paths:
+SET(CMAKE_C_TARGET_INCLUDE_PATH
+  "."
+  "/usr/local/include"
+  )
+SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+SET(CMAKE_ASM_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

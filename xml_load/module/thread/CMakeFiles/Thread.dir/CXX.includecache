@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/share/xml_load/module/thread/mutex.cpp
+/mnt/smb/Fsy412-s-repository-/xml_load/module/thread/mutex.cpp
 mutex.hpp
-/home/share/xml_load/module/thread/mutex.hpp
+/mnt/smb/Fsy412-s-repository-/xml_load/module/thread/mutex.hpp
 
-/home/share/xml_load/module/thread/mutex.hpp
+/mnt/smb/Fsy412-s-repository-/xml_load/module/thread/mutex.hpp
 windows.h
 -
 unistd.h
@@ -18,11 +18,11 @@ unistd.h
 pthread.h
 -
 
-/home/share/xml_load/module/thread/semaphore.cpp
+/mnt/smb/Fsy412-s-repository-/xml_load/module/thread/semaphore.cpp
 semaphore.hpp
-/home/share/xml_load/module/thread/semaphore.hpp
+/mnt/smb/Fsy412-s-repository-/xml_load/module/thread/semaphore.hpp
 
-/home/share/xml_load/module/thread/semaphore.hpp
+/mnt/smb/Fsy412-s-repository-/xml_load/module/thread/semaphore.hpp
 windows.h
 -
 unistd.h
@@ -30,11 +30,11 @@ unistd.h
 semaphore.h
 -
 
-/home/share/xml_load/module/thread/thread.cpp
+/mnt/smb/Fsy412-s-repository-/xml_load/module/thread/thread.cpp
 thread.hpp
-/home/share/xml_load/module/thread/thread.hpp
+/mnt/smb/Fsy412-s-repository-/xml_load/module/thread/thread.hpp
 
-/home/share/xml_load/module/thread/thread.hpp
+/mnt/smb/Fsy412-s-repository-/xml_load/module/thread/thread.hpp
 windows.h
 -
 process.h

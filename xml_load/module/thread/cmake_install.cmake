@@ -1,4 +1,4 @@
-# Install script for directory: /home/share/xml_load/module/thread
+# Install script for directory: /mnt/smb/Fsy412-s-repository-/xml_load/module/thread
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
