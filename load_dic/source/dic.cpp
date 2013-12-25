@@ -5,19 +5,14 @@ namespace ghca{
  
 int dictionary::scan(std::string path)
 {
-    DIR              *pDir ;  
+    DIR *pDir ;  
     
-    struct dirent    *ent  ;  
+    struct dirent *ent  ;  
     
-    int               i=0  ;  
+    int i = 0;  
     
-    char              childpath[512];  
- 
-    pDir=opendir(path.c_str());  
-	
-    memset(childpath,0,sizeof(childpath));  
- 
-  
+    pDir = opendir(path.c_str());  
+   
     while((ent=readdir(pDir))!=NULL)  
     {  
         if(ent->d_type & DT_DIR)  
@@ -204,6 +199,7 @@ int dictionary::scan(std::string path)
 				
 				_basic_name_dic.insert(std::make_pair("HUAWEI", _basic_dic_name_iter.size() - 1));
 			
+	
 			}else if (std::string (ent->d_name ) == "cisco.xml")
 			{
 				uint8_t key;
@@ -296,7 +292,7 @@ int dictionary::scan(std::string path)
 				_basic_dic_name_iter.push_back(pbasic_dic_name_container);
 				
 				_basic_name_dic.insert(std::make_pair("cisco", _basic_dic_name_iter.size() - 1));
-			
+		
 			}else if (std::string (ent->d_name ) == "redback.xml")
 			{
 				uint8_t key;
@@ -311,7 +307,6 @@ int dictionary::scan(std::string path)
 				
 				if (!doc.LoadFile(name.c_str()))
 				{
-				
 					std::cout << "load xml "<< name<<" failed!" << std::endl;
 					
 					return 1;
@@ -391,6 +386,7 @@ int dictionary::scan(std::string path)
 				_basic_dic_name_iter.push_back(pbasic_dic_name_container);
 				
 				_basic_name_dic.insert(std::make_pair("redback", _basic_dic_name_iter.size() - 1));
+			
 			
 			}else if (std::string (ent->d_name ) == "udb.xml")
 			{
@@ -580,6 +576,7 @@ int dictionary::scan(std::string path)
 				_basic_dic_name_iter.push_back(pbasic_dic_name_container);
 				
 				_basic_name_dic.insert(std::make_pair("unisphere", _basic_dic_name_iter.size() - 1));
+				
 			}else if (std::string (ent->d_name ) == "zte.xml")
 			{
 				uint8_t key; 
@@ -663,7 +660,6 @@ int dictionary::scan(std::string path)
 						
 						pchild = pchild ->NextSiblingElement();
 					}
-
 					pElementtmp=pElementtmp->NextSiblingElement();
 				}
 				
@@ -674,7 +670,6 @@ int dictionary::scan(std::string path)
 				_basic_dic_name_iter.push_back(pbasic_dic_name_container);
 				
 				_basic_name_dic.insert(std::make_pair("zte", _basic_dic_name_iter.size() - 1));
-				
 			}
 		}
     }  
