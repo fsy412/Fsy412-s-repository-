@@ -1,9 +1,0 @@
-#第三方库
-ADD_SUBDIRECTORY(tinyxml)
-#ghca实现的
-ADD_SUBDIRECTORY(stl)
-ADD_SUBDIRECTORY(queue)
-ADD_SUBDIRECTORY(common)
-ADD_SUBDIRECTORY(thread)
-ADD_SUBDIRECTORY(simplesocket)
-ADD_SUBDIRECTORY(configmanager)
