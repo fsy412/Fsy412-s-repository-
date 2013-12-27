@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<attrs>
+	<unisphere vid="4874">
+		<Unisphere-Virtual-Router value="1" type="string"/>
+		<Unisphere-Local-Address-Pool value="2" type="string"/>
+		<Unisphere-Local-Interface value="3" type="string"/>
+		<Unisphere-Primary-Dns value="4" type="ipaddr"/>
+		<Unisphere-Secondary-Dns value="5" type="ipaddr"/>
+		<Unisphere-Primary-Wins value="6" type="ipaddr"/>
+		<Unisphere-Secondary-Wins value="7" type="ipaddr"/>
+		<Unisphere-Tunnel-Virtual-Router value="8" type="string"/>
+		<Unisphere-Tunnel-Password value="9" type="string"/>
+		<ERX-Ingress-Policy-Name value="10" type="string"/>
+		<ERX-Egress-Policy-Name value="11" type="string"/>
+		<Unisphere-Ingress-Statistics value="12" type="integer"/>
+		<Unisphere-Egress-Statistics value="13" type="integer"/>
+		<Unisphere-Service-Category value="14" type="integer"/>
+		<Unisphere-pcr value="15" type="integer"/>
+		<Unisphere-scr-Or-Cbr-Bit-Rate value="16" type="integer"/>
+		<Unisphere-mbs value="17" type="integer"/>
+		<Unisphere-Init-CLI-Access-Level value="18" type="string"/>
+		<Unisphere-Allow-All-VR-Access value="19" type="integer"/>
+		<Unisphere-Alt-CLI-Access-Level value="20" type="string"/>
+		<Unisphere-Alt-CLI-VRouter-Name value="21" type="string"/>
+		<Unisphere-SA-Validate value="22" type="integer"/>
+		<Unisphere-Igmp-enable value="23" type="integer"/>
+		<Unisphere-Intfs-desc value="63" type="string"/>
+	</unisphere>
+</attrs>
