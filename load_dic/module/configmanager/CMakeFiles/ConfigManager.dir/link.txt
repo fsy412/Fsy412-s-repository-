@@ -1,2 +1,0 @@
-/usr/bin/ar cr libConfigManager.a  CMakeFiles/ConfigManager.dir/configmanager.cpp.o
-/usr/bin/ranlib libConfigManager.a

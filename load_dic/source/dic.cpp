@@ -107,7 +107,7 @@ int dictionary::scan(std::string path)
 						}
   
 						avp.name = pchild->Value();
-						
+						std::cout<<"insert"<<avp.name<<std::endl;
 						pbasic_dic_id_container->insert(std::make_pair(avp.id, avp));
 						
 						pbasic_dic_name_container->insert(std::make_pair(avp.name, avp));
