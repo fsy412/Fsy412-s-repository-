@@ -1,0 +1,106 @@
+//option java_package = "com.example.demo"; 
+option java_outer_classname = "MessageProto"; 
+
+message SessionId {
+	optional string id = 1; 
+}
+message Ping {
+	optional string id = 1; 
+}
+
+message ChatReq { 
+	optional string from = 1; 
+	optional string to = 2; 
+}
+
+message ChatAccept { 
+	optional string from = 1; 
+	optional string to = 2; 
+}
+
+message ChatMsg { 
+	optional string from = 1; 
+	repeated string to = 2; 
+	optional string content = 3; 
+	optional string group = 4; 
+	optional string server_group = 5; 
+	optional string server_id = 6; 
+}
+
+message S2SLoginReq { 
+	optional string server_id = 1; 
+	optional string ip = 2; 
+	optional int32 port = 3; 
+}
+
+message S2SChatMsg { 
+	optional ChatMsg chat_msg = 1;
+}
+
+message S2SStatus { 
+	optional string server_id = 1;  
+	optional int32 user_count = 2;
+}
+
+message DBOperationReq { 
+	optional string procedure = 1;  
+	optional string sql = 2;
+}
+
+message DBOperationResp { 
+	optional string total_record = 1;  
+}
+
+message DBOperationRespContent { 
+	optional string result = 1;  
+}
+
+message DBOperationRespAck { 
+	enum Status {  
+		SUCCESS= 0;  
+		FAILED = 1;  
+	}  
+	optional Status status = 1;  
+}
+
+message LoginReq { 
+	optional string user_id = 1; 
+}
+
+message LoginResp { 
+	optional string session_id = 1;
+}
+
+
+message ServerInfoReq{
+	optional string ip = 1; 
+	optional string param = 2; 
+}
+
+message ServerInfoResp{
+	optional string ip = 1; 
+	optional int32 port = 2;
+}
+
+message Register {
+        optional string name = 1;
+        optional string id = 2;
+        optional string email = 3;
+}
+
+message Order {
+        optional string id = 1;
+        optional string product_name = 2;
+        optional string money = 3;
+        optional string time = 4;
+}
+
+message Resp {
+        optional string code = 1;
+        optional string msg = 2;
+}
+
+
+message calculate {
+        optional string input = 1;
+}       
