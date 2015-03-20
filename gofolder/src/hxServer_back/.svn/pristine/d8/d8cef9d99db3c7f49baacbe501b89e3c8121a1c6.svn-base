@@ -1,0 +1,107 @@
+package main
+
+import (
+	"fmt"
+	//	"github.com/astaxie/beego"
+	//"hxServer/ims"
+	"hxServer/logs"
+	//"hxServer/mongo"
+	//	_ "hxServer/routers"
+	//	"hxServer/session"
+	//	"hxServer/sms"
+	//	"hxServer/ssdb"
+	//"hxServer/util"
+	"math/rand"
+
+	//"encoding"
+	//"net/url"
+	"hxServer/ossapi"
+	//	"hxServer/routers"
+	//"hxServer/test"
+	"github.com/bitly/go-simplejson"
+	"hxServer/umeng"
+	"os"
+	"runtime"
+	"time"
+)
+
+func CheckError(err error) {
+	if err == nil {
+		return
+	}
+	logger.Error("CheckError.Exit:%s", err.Error())
+	logger.GetSysLogger().Flush()
+	os.Exit(1)
+}
+
+func TestPutObjectFromFile() {
+	var testBucket = "boai"
+	var oss = ossapi.New()
+	file, err := os.Open("test.txt")
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+
+	var testObject = "api_handler.go"
+	response := oss.PutObjectFromFile(testBucket, testObject, nil, file)
+	if response.StatusCode != 200 {
+		fmt.Println("Unable to put Object")
+	}
+}
+
+func TestUpload() {
+	start := time.Now()
+
+	var testBucket = "boai"
+	var oss = ossapi.New()
+	file, err := os.Open("1m.file")
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+
+	upload_count := 100
+
+	for i := 0; i < upload_count; i++ {
+		var dest_obj = fmt.Sprintf("1m_%d.file", i)
+		response := oss.PutObjectFromFile(testBucket, dest_obj, nil, file)
+		if response.StatusCode != 200 {
+			fmt.Println("Unable to put Object")
+		}
+	}
+	end := time.Now()
+	s := fmt.Sprintf("time used:%d seconds", start.Sub(end))
+	fmt.Println(s)
+}
+
+func main() {
+	rand.Seed(time.Now().UTC().UnixNano())
+	cpus := runtime.NumCPU()
+	if cpus > 1 {
+		runtime.GOMAXPROCS(cpus)
+	}
+
+	umeng.Test()
+	//umeng.SendIOSUnicast("test")
+	//TestUpload()
+	//TestPutObjectFromFile()
+	//testAliOss()
+	// 初始化
+	//err := mongo.Initialize()
+	//CheckError(err)
+
+	// 启动短信服务(可配置)
+	//sms.SmsServer()
+	//ossapi.Initialize()
+
+	// 初始化并启动WEB服务
+	//beego.BeeLogger.DelLogger("console") // 日志显示控制
+	//	beego.SetStaticPath("/templates", "templates")
+	//	beego.SetStaticPath("/img", "img")
+	//	beego.TemplateLeft = "<<<"
+	//	beego.TemplateRight = ">>>"
+	//routers.Start()
+	//beego.Run()
+
+}

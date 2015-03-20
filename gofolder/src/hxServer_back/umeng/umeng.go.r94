@@ -1,0 +1,143 @@
+package umeng
+
+import (
+	"fmt"
+	"github.com/bitly/go-simplejson"
+	"hxServer/util"
+	"net/http"
+	//	"net/url"
+	"github.com/astaxie/beego/config"
+	"hxServer/logs"
+	"io/ioutil"
+	"strings"
+	"time"
+)
+
+const (
+	postPath        = "/api/send"
+	host            = "http://msg.umeng.com"
+	appkey          = "550253d7fd98c55fdd000bab"
+	appMasterSecret = "exv7cjcxby5h7katpkjmgdtkzxbkkob6"
+)
+
+var (
+	production_mode bool
+)
+
+//初始化读配置
+func Initialize() {
+	ini, err := config.NewConfig("ini", "./conf/.conf")
+	if err != nil {
+		logger.Error("umeng NewConfig fail.msg:%s", err.Error())
+		return
+	}
+	if ini.DefaultBool("production_mode", false) == false {
+		fmt.Println("return  DefaultBool")
+		return
+	}
+}
+
+//计算签名
+func getSign(body string) string {
+	url := host + postPath
+	return util.GetMD5([]byte("POST" + url + body + appMasterSecret))
+}
+
+//获得post消息体
+//参数：设备号， 推送内容, 消息发送类型
+//返回：json 消息体
+func getBody(device_token string, content string, cast_type string) string {
+	body := simplejson.New()
+	body.Set("appkey", appkey)
+	body.Set("timestamp", time.Now().Unix())
+	body.Set("type", cast_type)
+	body.Set("device_tokens", device_token)
+	body.Set("production_mode", "false")
+
+	playlaod := simplejson.New()
+	aps := simplejson.New()
+	aps.Set("alert", content)
+	playlaod.Set("aps", aps)
+	body.Set("payload", playlaod)
+
+	body.Set("description", content)
+	var out []byte
+	out, _ = body.Encode()
+	fmt.Println("body:", string(out))
+	return string(out)
+}
+
+//发送ios单播推送消息
+//参数：设备号， 推送消息内容
+//返回：1 success, 0 fail
+func SendIOSUnicast(device_token string, content string) int {
+	body := getBody(device_token, content, "unicast")
+	url := host + postPath + "?sign=" + getSign(body)
+	resp, err := http.Post(url,
+		"application/x-www-form-urlencoded",
+		strings.NewReader(body))
+	if err != nil {
+		fmt.Println(err)
+	}
+	defer resp.Body.Close()
+	response, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		// handle error
+	}
+
+	jsret, err := simplejson.NewJson([]byte(string(response)))
+	if err != nil {
+		logger.Error("SendAndroidUnicast:", err.Error())
+	}
+
+	var ret int
+	strret, _ := jsret.Get("ret").String()
+	if strret == "FAIL" {
+		ret = 0
+		logger.Error(string(response))
+		fmt.Println("SendIOSUnicast:err", string(response))
+	} else {
+		ret = 1
+	}
+	return ret
+}
+
+//发送android单播推送消息
+//参数：设备号， 推送消息内容
+//返回：1 success, 0 fail
+func SendAndroidUnicast(device_token string, content string) int {
+	body := getBody(device_token, content, "unicast")
+	url := host + postPath + "?sign=" + getSign(body)
+	resp, err := http.Post(url,
+		"application/x-www-form-urlencoded",
+		strings.NewReader(body))
+	if err != nil {
+		fmt.Println(err)
+	}
+	defer resp.Body.Close()
+	response, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		// handle error
+	}
+
+	jsret, err := simplejson.NewJson([]byte(string(response)))
+	if err != nil {
+		fmt.Println("SendAndroidUnicast:", err.Error())
+	}
+
+	var ret int
+	strret, _ := jsret.Get("ret").String()
+	if strret == "FAIL" {
+		ret = 0
+		logger.Error(string(response))
+		fmt.Println("SendAndroidUnicast:err", string(response))
+	} else {
+		ret = 1
+	}
+	return ret
+}
+
+func Test() {
+	//getBody("test")
+	SendAndroidUnicast("test", "test")
+}

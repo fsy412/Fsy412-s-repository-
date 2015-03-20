@@ -1,0 +1,183 @@
+package util
+
+import (
+	"crypto/md5"
+	"crypto/rand"
+	"encoding/hex"
+	"encoding/json"
+	"fmt"
+	"github.com/astaxie/beego/httplib"
+	"github.com/bitly/go-simplejson"
+	"hxServer/logs"
+	"io/ioutil"
+	"math"
+	"os"
+	"os/exec"
+	"strings"
+	"time"
+)
+
+const (
+	ascstr = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+	numstr = "0123456789"
+)
+
+// 获取MD编码(string)
+func GetMD5(data []byte) string {
+	md := md5.New()
+	md.Write(data)
+	return fmt.Sprintf("%x", md.Sum(nil))
+}
+
+// 获取MD编码(Byte)
+func GetMD5_Byte(data []byte) []byte {
+	md := md5.New()
+	md.Write(data)
+	return md.Sum(nil)
+}
+
+// 获取唯一ID
+// 时间（纳秒）+7位随机数
+func GetUID() string {
+	ts := int64(time.Now().UnixNano())
+	rd := make([]byte, 7)
+	rand.Read(rd)
+	return fmt.Sprintf("%v%s", ts, hex.EncodeToString(rd))
+}
+
+// 获取唯一ID
+// 时间（纳秒）+7位随机数
+// 有顺序的GUID
+func GetGUID() string {
+	ts := int64(time.Now().UTC().UnixNano())
+	rd := make([]byte, 7)
+	rand.Read(rd)
+	return fmt.Sprintf("%v%s", ts, hex.EncodeToString(rd))
+}
+
+// 获取唯一ID随机TOKEN(TODO：以后验证保证唯一)
+func GenToken() string {
+	var bytes = make([]byte, 12)
+	rand.Read(bytes)
+	for k, v := range bytes {
+		bytes[k] = ascstr[v%62]
+	}
+	return string(bytes)
+}
+
+// 产生验证码(4位数字)
+func GenVCode() string {
+	var bytes = make([]byte, 4)
+	rand.Read(bytes)
+	for k, v := range bytes {
+		bytes[k] = numstr[v%10]
+	}
+	return string(bytes)
+}
+
+// 产生上传文件路径串
+func GetUploadPath() string {
+	return time.Now().Format("060102/15/")
+}
+
+// 精确到小时的路径名称
+func GetYmdhPath() string {
+	return time.Now().Format("060102/15/")
+}
+
+// 获取文件扩展名
+func GetFileExt(filename string) string {
+	lstr := strings.Split(filename, ".")
+	if len(lstr) > 1 {
+		return lstr[len(lstr)-1]
+	}
+	return ""
+}
+
+// 文件是否存在
+func IsFileExist(filename string) bool {
+	fi, err := os.Stat(filename)
+	if err == nil && fi.Size() > 0 && fi.IsDir() == false {
+		return true
+	}
+	return false
+}
+
+// 转换成接口
+func JsonInterface(js *simplejson.Json) interface{} {
+	var i interface{}
+	data, err := js.MarshalJSON()
+	if err != nil {
+		return i
+	}
+	json.Unmarshal(data, &i)
+	return i
+}
+
+// 转换成字符串
+func JsonToStr(js *simplejson.Json) string {
+	data, err := js.MarshalJSON()
+	if err != nil {
+		return ""
+	}
+	return string(data)
+}
+
+//const EarthRadius = 6378137
+// 1 km in miles
+//const kmToMiles = 0.621371192
+// 计算两个经纬度之间的距离
+func GetDistance(lng1, lat1, lng2, lat2 float64) uint64 {
+	radius := 6378137.0 // 6378137  // 6371000
+	rad := math.Pi / 180.0
+	lat1 = lat1 * rad
+	lng1 = lng1 * rad
+	lat2 = lat2 * rad
+	lng2 = lng2 * rad
+	theta := lng2 - lng1
+	dist := math.Acos(math.Sin(lat1)*math.Sin(lat2) + math.Cos(lat1)*math.Cos(lat2)*math.Cos(theta))
+	//fmt.Println("距离计算:", lng1, lat1, lng2, lat2, dist*radius)
+	return uint64(dist * radius)
+}
+
+// 启动一个服务进程
+// 采用线程方式(go)调用本函数
+func run(pro, param string) {
+	for {
+		cmd := exec.Command(pro, param)
+		err := cmd.Start()
+		if err != nil {
+			time.Sleep(time.Second * 5)
+			continue
+		}
+		logger.Info("%s 进程启动", time.Now().Format("2006-01-02 15:04:05"), err)
+		err = cmd.Wait()
+		logger.Info("%s 进程退出", time.Now().Format("2006-01-02 15:04:05"), err)
+		time.Sleep(time.Second * 1)
+	}
+}
+
+// 发出一个HTTP-GET请求，并返回JSON
+func HttpGet_JSON(url string) *simplejson.Json {
+	js := simplejson.New()
+	resp, err := httplib.Get(url).SetTimeout(30*time.Second, 30*time.Second).Response()
+
+	if err != nil {
+		js.Set("sys_error", -1)
+		return js
+	}
+
+	defer resp.Body.Close()
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		js.Set("sys_error", -2)
+		return js
+	}
+	js, err = simplejson.NewJson(body)
+	if err != nil {
+		js.Set("sys_error", -3)
+		return js
+	}
+	js.Set("sys_error", 0)
+	return js
+}
